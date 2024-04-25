@@ -20,6 +20,7 @@ header {
 header h1 {
     margin-bottom: 22px;
     color: rgb(2, 103, 150);
+    margin-top: 250px;
 }
 
 form {
@@ -51,9 +52,18 @@ form button {
 .container {
 text-align: center;
 margin-top: 250px;
+max-width: 350px;
+margin:0 auto;
+
 }
 
-ul li {
-    color: rgb(2, 103, 150);
+ul li{
+    color: rgb(0, 53, 78);
     padding: 4px;
+    display: flex;
+    cursor: pointer;
+}
+
+.checked {
+    text-decoration: line-through ;
 }
