@@ -8,7 +8,6 @@ $(document).ready(function(){
 
         $(`<span>${inputNomeTarefa}</span>`).appendTo(novaTarefa);
         $(novaTarefa).appendTo('ul');
-        tarefas.push = $(`${inputNomeTarefa}`)
         $('#nome-tarefa').val('');
 })
 
