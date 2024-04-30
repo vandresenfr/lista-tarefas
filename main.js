@@ -6,7 +6,12 @@ $(document).ready(function(){
         const inputNomeTarefa = $('#nome-tarefa').val();
         const novaTarefa = $('<li></li>');
 
-        $(`<span>${inputNomeTarefa}</span>`).appendTo(novaTarefa);
+        if (verificaSeExiste(inputNomeTarefa)) {
+            alert("Tarefa jÃ¡ existe!")
+            return;
+        }
+        
+        $(`<li>${inputNomeTarefa}</li>`).appendTo(novaTarefa);
         $(novaTarefa).appendTo('ul');
         $('#nome-tarefa').val('');
 })
@@ -18,4 +23,17 @@ $(document).ready(function(){
             e.target.classList.add('checked');
         }
     })
+
+    function verificaSeExiste(novaTarefa) {
+        var existe = false;
+        $('ul').find('li').each(function () {
+
+            if ($(this).text() === novaTarefa) {
+                existe = true;
+                return false; // para sair da verificacao
+            }
+
+        });
+        return existe;
+    }
 })
